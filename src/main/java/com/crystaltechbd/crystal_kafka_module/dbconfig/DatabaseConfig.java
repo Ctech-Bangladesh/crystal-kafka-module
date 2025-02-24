@@ -1,6 +1,5 @@
 package com.crystaltechbd.crystal_kafka_module.dbconfig;
 
-import com.crystaltechbd.crystal_kafka_module.consumer.KafkaMessageListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -10,7 +9,7 @@ import java.util.Properties;
 
 public class DatabaseConfig {
     private static final Properties properties = new Properties();
-    static Logger log = LoggerFactory.getLogger(KafkaMessageListener.class);
+    static Logger log = LoggerFactory.getLogger(DatabaseConfig.class);
     static {
         try (FileInputStream input = new FileInputStream("E:\\CTech\\hsms-consumer\\hsms-consumer\\src\\main\\resources\\config.properties")) {
             properties.load(input);
